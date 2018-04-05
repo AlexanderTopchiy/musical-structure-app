@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Musical Structure</string>
+    <string name="baroque_music">Baroque</string>
+    <string name="classical_music">Classical</string>
+    <string name="romantic_music">Romantic</string>
+</resources>
