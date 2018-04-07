@@ -8,7 +8,7 @@ public class RomanticActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.track_list);
+        setContentView(R.layout.play_list);
 
     }
 }
