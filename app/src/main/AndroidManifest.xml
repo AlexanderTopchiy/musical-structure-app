@@ -25,6 +25,9 @@
         <activity
             android:name=".RomanticActivity"
             android:label="@string/romantic_music" />
+        <activity
+            android:name=".PlayerActivity"
+            android:label="Playing"/>
     </application>
 
 </manifest>

@@ -1,12 +1,21 @@
 package com.example.android.musicalstructure;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Set;
 
-public class BaroqueActivity extends AppCompatActivity {
+public class BaroqueActivity extends AppCompatActivity implements ListView.OnItemClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,5 +65,28 @@ public class BaroqueActivity extends AppCompatActivity {
         // Do this by calling the setAdapter method on the {@link ListView} object and pass in
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
         listView.setAdapter(adapter);
+
+        // Set OnClickListener on ListView to identify the item on ListView clicked by user
+        // Text on the ListView item clicked is passed on to PlayerActivity
+        listView.setOnItemClickListener(this);
+    }
+
+    /**
+     * Method to identify ListView item clicked and launch PlayerActivity
+     */
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+        // Get the name of opus.
+        TextView opusChosen = findViewById(R.id.opus_text_view);
+        String opusForPlaying = opusChosen.getText().toString();
+
+        // Get the name of composer.
+        TextView composerChosen = findViewById(R.id.composer_text_view);
+        String composerForPlaying = composerChosen.getText().toString();
+
+        // Sending the name of composer and his opus to PlayerActivity.
+        Intent opusIntent = new Intent(this, PlayerActivity.class);
+        opusIntent.putExtra("opus", opusForPlaying);
+        opusIntent.putExtra("composer", composerForPlaying);
+        startActivity(opusIntent);
     }
 }
