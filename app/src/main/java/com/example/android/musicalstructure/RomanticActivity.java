@@ -18,7 +18,16 @@ public class RomanticActivity extends AppCompatActivity {
         ArrayList<Opus> opuses = new ArrayList<Opus>();
 
         // Adding opuses to an array.
-
+        opuses.add(new Opus("Brahms", "Symphony No.4 in E minor"));
+        opuses.add(new Opus("Liszt", "Transcendental Étude no.04 \"Mazeppa\""));
+        opuses.add(new Opus("Liszt", "Liebestraum No. 3, Notturno"));
+        opuses.add(new Opus("Chopin", "Nocturne op.9 No.2"));
+        opuses.add(new Opus("Chopin", "Etude in E minor, Op. 25, No. 5"));
+        opuses.add(new Opus("Schubert", "Piano Sonata No.13 in A-dur"));
+        opuses.add(new Opus("Schubert", "Impromptu Op.90 No.4 in A-flat major"));
+        opuses.add(new Opus("Viardot", "\"Haí Lulí\""));
+        opuses.add(new Opus("Schumann", "Concerto for Violoncello and Orchestra A minor"));
+        opuses.add(new Opus("Delibes", "Lakmé - Flower Duet"));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
