@@ -18,7 +18,26 @@ public class BaroqueActivity extends AppCompatActivity {
         ArrayList<Opus> opuses = new ArrayList<Opus>();
 
         // Adding opuses to an array.
-
+        opuses.add(new Opus("Handel",
+                            "Water Music, Suite No. 3 in G major, Minuet I, II."));
+        opuses.add(new Opus("Pachelbel",
+                            "Canon in D Major"));
+        opuses.add(new Opus("Rameau",
+                            "Suite en la Gavotte et six Doubles"));
+        opuses.add(new Opus("Pergolesi",
+                            "Stabat Mater Dolorosa "));
+        opuses.add(new Opus("Purcell",
+                            "The Cold Song"));
+        opuses.add(new Opus("Telemann",
+                            "Concerto in E major for flute, oboe d'amore, viola d'amore & strings"));
+        opuses.add(new Opus("Vinci",
+                            "In braccio a mille furie (Semiramide riconosciuta)"));
+        opuses.add(new Opus("Leo",
+                            "Mesero pargoletto (Demofoonte)"));
+        opuses.add(new Opus("Porpora",
+                            "Passaggier che sulla sponda (Semiramide riconosciuta)"));
+        opuses.add(new Opus("Lully",
+                            "Marche pour la cérémonie des Turcs"));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
