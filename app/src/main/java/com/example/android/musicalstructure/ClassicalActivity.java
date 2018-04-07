@@ -18,7 +18,16 @@ public class ClassicalActivity extends AppCompatActivity {
         ArrayList<Opus> opuses = new ArrayList<Opus>();
 
         // Adding opuses to an array.
-
+        opuses.add(new Opus("Beethoven", "Symphony No. 9"));
+        opuses.add(new Opus("Beethoven", "Symphony No. 3"));
+        opuses.add(new Opus("Beethoven", "Sonata No. 8  \"Pathétique\""));
+        opuses.add(new Opus("Mozart", "Oboe Concerto in C major"));
+        opuses.add(new Opus("Mozart", "Sonata for Two Pianos in D"));
+        opuses.add(new Opus("Mozart", "Piano Sonata No 16 C major "));
+        opuses.add(new Opus("Haydn", "Piano Concerto No. 11 in D major"));
+        opuses.add(new Opus("Haydn", "Symphony no. 94 \"Surprise\" "));
+        opuses.add(new Opus("Haydn", "Symphony No. 45 \"Farewell\""));
+        opuses.add(new Opus("Boccherini", "Minuet in E Major"));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
