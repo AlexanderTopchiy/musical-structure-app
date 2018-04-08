@@ -75,13 +75,12 @@ public class BaroqueActivity extends AppCompatActivity implements ListView.OnIte
      * Method to identify ListView item clicked and launch PlayerActivity
      */
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-        // Get the name of opus.
-        TextView opusChosen = findViewById(R.id.opus_text_view);
-        String opusForPlaying = opusChosen.getText().toString();
+        // Get the selected opus.
+        Opus currentOpus = (Opus) adapterView.getItemAtPosition(position);
 
-        // Get the name of composer.
-        TextView composerChosen = findViewById(R.id.composer_text_view);
-        String composerForPlaying = composerChosen.getText().toString();
+        // Extract strings from Opus object.
+        String opusForPlaying = currentOpus.getOpus();
+        String composerForPlaying = currentOpus.getNameOfComposer();
 
         // Sending the name of composer and his opus to PlayerActivity.
         Intent opusIntent = new Intent(this, PlayerActivity.class);
